@@ -6,7 +6,7 @@ import * as React from 'react'
 import * as ReactDOM from 'react-dom'
 
 const App = () => {
-    return (<div>QUIKPOTZ BAE B</div>)
+    return (<div>Hello, World!</div>)
 }
 
 document.addEventListener('DOMContentLoaded', () => {
