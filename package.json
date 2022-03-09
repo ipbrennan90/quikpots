@@ -1,0 +1,23 @@
+{
+  "name": "app",
+  "private": "true",
+  "dependencies": {
+    "@hotwired/stimulus": "^3.0.1",
+    "@hotwired/turbo-rails": "^7.1.1",
+    "esbuild": "^0.14.25",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "ts-check": "^0.2.4",
+    "typescript": "^4.6.2"
+  },
+  "scripts": {
+    "build:js": "esbuild app/javascript/*.* --bundle --sourcemap --outdir=app/assets/builds",
+    "dev": "tsc-watch --noClear -p tsconfig.json --onSuccess \"yarn build:js\" --onFailure \"yarn failure:js\"",
+    "failure:js": "rm ./app/assets/builds/applicaiton.js && rm ./app/assets/builds/application.js.map"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.39",
+    "@types/react-dom": "^17.0.13",
+    "tsc-watch": "^4.6.0"
+  }
+}
