@@ -5,8 +5,14 @@ import "./controllers"
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
 
+declare global {
+    interface Window { gon: any }
+}
+
+const gon = window.gon
+
 const App = () => {
-    return (<div>Hello, World!</div>)
+    return (<div>{gon.testCase}</div>)
 }
 
 document.addEventListener('DOMContentLoaded', () => {
